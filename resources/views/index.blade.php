@@ -14,10 +14,8 @@
             <form id="factCheckForm">
                 <div class="inputGenerate">
                     <div id="inputArea" class="input-field">
-                        <!-- Akan diisi dinamis lewat JS -->
+                        <div id="inputError" style="color: red; font-size: 0.9rem; margin-top: 5px; display: none;"></div>
                     </div>
-
-                    <!-- Tombol submit -->
                     <button type="submit" class="button generate-btn">Cek Fakta
                         <span class="hoverEffect"><span></span></span>
                     </button>
@@ -140,13 +138,38 @@
 
             const formData = new FormData(this);
 
+            const errorBox = document.getElementById("inputError");
             if (!isInputValid(formData)) {
-                alert("Silakan pilih input mode terlebih dahulu.");
+                errorBox.textContent = "Silakan pilih input mode dan masukkan data dengan benar.";
+                errorBox.style.display = "block";
                 return;
+            } else {
+                errorBox.style.display = "none";
             }
 
             detectFakeNews();
         });
+
+        if (mode === "text") {
+            inputArea.innerHTML = `
+        <textarea name="textInput" rows="5" placeholder="Tulis teks berita di sini..." required></textarea>
+        <div id="inputError" style="color: red; font-size: 0.9rem; margin-top: 5px; display: none;"></div>
+    `;
+        } else if (mode === "link") {
+            inputArea.innerHTML = `
+        <input type="url" name="linkInput" placeholder="Masukkan link berita..." required />
+        <div id="inputError" style="color: red; font-size: 0.9rem; margin-top: 5px; display: none;"></div>
+    `;
+        } else if (mode === "image") {
+            inputArea.innerHTML = `
+        <div class="custom-file-input-wrapper">
+            <label for="fileUpload" class="custom-file-label">Pilih Gambar Berita</label>
+            <input type="file" id="fileUpload" name="imageInput" accept="image/*" onchange="updateFileName(this)" />
+            <span id="file-name">Belum ada file</span>
+        </div>
+        <div id="inputError" style="color: red; font-size: 0.9rem; margin-top: 5px; display: none;"></div>
+    `;
+        }
 
         function isInputValid(formData) {
             if (currentInputMode === "text") {
@@ -195,7 +218,6 @@
             const fileName = input.files.length > 0 ? input.files[0].name : "Belum ada file";
             document.getElementById("file-name").textContent = fileName;
 
-            // Ganti tombol aktif
             document.querySelectorAll('.hometags').forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
         }
