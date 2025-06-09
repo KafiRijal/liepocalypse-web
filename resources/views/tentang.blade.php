@@ -16,19 +16,10 @@
             <div class="row marketingRow">
                 <div class="col-xxl-6 col-xl-6">
                     <p class="dui pb-2">
-                        Sit dui ligula viverra eget volutpat mauris. Nibh sagittis viverra
-                        et rhoncus bibendum luctus. Tristique interdum cursus dictum
-                        gravida sed feugiat morbi. Id est sed urna maecenas est placerat
-                        aliquam et quis. Feugiat vitae justo mi justo nunc senectus sapien
-                        non.
+                        Kami percaya bahwa kekuatan informasi yang benar dapat membentuk masyarakat yang lebih cerdas dan kritis. Karena itu, kami mengembangkan Liepocalypse — sebuah solusi cerdas untuk membantu pengguna mendeteksi berita hoaks dengan cepat, mudah, dan akurat.
                     </p>
                     <p class="dui">
-                        Sit dui ligula viverra eget volutpat mauris. Nibh sagittis viverra
-                        et rhoncus bibendum luctus. Tristique interdum cursus dictum
-                        gravida sed feugiat morbi. Id est sed urna maecenas est placerat
-                        aliquam et quis. Feugiat vitae justo mi justo nunc senectus sapien
-                        non. Tristique tellus ac proin integer. Vitae elementum vitae sem
-                        arcu. Lorem aliquam.
+                        Liepocalypse hadir sebagai jawaban atas kebutuhan akan literasi digital yang semakin penting di era informasi. Kami memadukan teknologi Artificial Intelligence (AI) dan Natural Language Processing (NLP) untuk menghadirkan platform pendeteksi hoaks berbasis web yang praktis, modern, dan dapat diandalkan oleh siapa saja.
                     </p>
                 </div>
                 <div class="col-xxl-6 col-xl-6">
@@ -40,7 +31,7 @@
                             <span class="img-bg-circle quis-bg-cir"></span>
                         </div>
                         <h3 class="quis-text-list">
-                            Quis sit in id egestas turpis vitae tristique senectus
+                            Deteksi otomatis berita hoaks berbasis AI & NLP
                         </h3>
                     </div>
                     <div class="quis-head">
@@ -51,7 +42,7 @@
                             <span class="img-bg-circle quis-bg-cir"></span>
                         </div>
                         <h3 class="quis-text-list">
-                            Neque eleifend amet ut vel fusce facilisis nulla
+                            Analisis teks dan tautan dengan skor kepercayaan
                         </h3>
                     </div>
                     <div class="quis-head">
@@ -62,7 +53,7 @@
                             <span class="img-bg-circle quis-bg-cir"></span>
                         </div>
                         <h3 class="quis-text-list">
-                            Nulla at diam cursus lorem nunc facilisis non phasellus
+                            Saran berita dari sumber terpercaya
                         </h3>
                     </div>
                     <div class="quis-head mb-0">
@@ -73,7 +64,7 @@
                             <span class="img-bg-circle quis-bg-cir"></span>
                         </div>
                         <h3 class="quis-text-list">
-                            Nullam faucibus facilisis nunc turpis adipiscing
+                            Riwayat pengecekan yang tersimpan rapi
                         </h3>
                     </div>
                 </div>
@@ -84,18 +75,14 @@
                         Mengapa Harus Memilih Kami? <span>Liepocalypse</span>
                     </h2>
                     <p class="dui pb-2">
-                        Embark on a journey of visual innovation as you delve into the
-                        realm of the AI Image Generator. This revolutionary tool harnesses
-                        the prowess of advanced algorithms to breathe life into your
-                        imagination.
+                        Di tengah maraknya penyebaran berita palsu, Liepocalypse hadir sebagai solusi terpercaya untuk membantu Anda memilah informasi yang benar. Kami tidak hanya menyediakan alat deteksi hoaks berbasis AI, tetapi juga pengalaman yang mudah, cepat, dan akurat untuk semua kalangan.
                     </p>
                     <p class="dui">
-                        Unleash your creativity and witness the power of AI Image
-                        Generator as it transforms ideas into mesmerizing images.
+                        Jangan biarkan dirimu tertipu hoaks! Gunakan Liepocalypse untuk mendeteksi berita palsu secara instan, mudah, dan akurat. Ditenagai oleh AI dan NLP terkini, aplikasi ini siap jadi alat bantu andalanmu dalam literasi digital.
                     </p>
                     <div class="tryImage-btn-main grnezQ">
                         <a href="#" class="button">
-                            Generate Your Image
+                            Coba Sekarang
                             <span class="hoverEffect">
                                 <span></span>
                             </span>
@@ -107,38 +94,33 @@
                         <span class="exce-box-ciecl" id="exce-box1"></span>
                         <div class="excellent">
                             <p>
-                                <img src="assets/images/svg/excellent.svg" alt="excellent" />Excellent Support
+                                <img src="assets/images/svg/excellent.svg" alt="excellent" />Deteksi Hoaks Cerdas
                             </p>
                         </div>
                         <h3 class="rnaip">
-                            Amet id urna ipsum donec amet. Diam sapien a convallis
-                            vestibulum condimentum sit. Elementum sodales scelerisque.
+                            Sistem AI dan NLP kami mampu menganalisis teks atau link berita untuk mendeteksi potensi hoaks secara cepat dan akurat.
                         </h3>
                     </div>
                     <div class="exce-box">
                         <span class="exce-box-ciecl" id="exce-box2"></span>
                         <div class="excellent">
                             <p>
-                                <img src="assets/images/svg/reliable.svg" alt="reliable" />Reliable Expert
+                                <img src="assets/images/svg/reliable.svg" alt="reliable" />Rekomendasi Terpercaya
                             </p>
                         </div>
                         <h3 class="rnaip">
-                            Amet id urna ipsum donec amet. Diam sapien a convallis
-                            vestibulum condimentum sit. Elementum sodales scelerisque.
+                            Liepocalypse memberikan saran berita serupa dari sumber terpercaya untuk membantu pengguna melakukan verifikasi kebenaran berita.
                         </h3>
                     </div>
                     <div class="exce-box mb-0">
                         <span class="exce-box-ciecl" id="exce-box3"></span>
                         <div class="excellent">
                             <p>
-                                <img src="assets/images/svg/unique.svg" alt="unique" />Unique
-                                Technology
+                                <img src="assets/images/svg/unique.svg" alt="unique" />Riwayat Pengecekan
                             </p>
                         </div>
                         <h3 class="rnaip">
-                            Amet id urna ipsum donec amet. Diam sapien a convallis
-                            vestibulum condimentum sit. Elementum sodales scelerisque.
-                        </h3>
+                            Semua aktivitas pengecekan berita akan tersimpan dalam riwayat pengguna sehingga mudah diakses kembali kapan saja.
                     </div>
                 </div>
             </div>
@@ -149,8 +131,7 @@
         <img class="blue-gardient3" src="assets/images/home-page/blue-gardient3.png" alt="blue-gardient3">
         <div class="container">
             <h2 class="sec-heding"> Cara Kerja <span>Liepocalypse</span></h2>
-            <p class="sub-heding">They evolve and learn from experiences. Benefit from adaptive algorithms that
-                continuously improve performance:</p>
+            <p class="sub-heding">Deteksi hoaks kini lebih mudah! Ikuti 3 langkah sederhana berikut untuk memverifikasi berita secara instan:</p>
             <div class="wrapper">
                 <div class="sugg-box">
                     <div class="sugg-img-main">
@@ -159,21 +140,18 @@
                     <div>
                         <div class="stie pt-0">
                             <p class="setpSugg">Step 1</p>
-                            <h3 class="gendseratio flex-pri">Describe what you’d like to create</h3>
-                            <p class="eugiat flex-pri">Type any idea that you want to create in text format. In the
-                                twilight of curiosity, let's craft a narrative tapestry.</p>
+                            <h3 class="gendseratio flex-pri">Masukkan Teks atau Link Berita, dan Gambar</h3>
+                            <p class="eugiat flex-pri">Tempelkan teks atau URL berita, atau upload gambar yang ingin kamu periksa.</p>
                         </div>
                         <div class="stie">
                             <p class="setpSugg">Step 2</p>
-                            <h3 class="gendseratio flex-pri">Input options and style</h3>
-                            <p class="eugiat flex-pri">In the realm of creative alchemy, browse through a large library
-                                and pick a style that suits your idea perfectly.</p>
+                            <h3 class="gendseratio flex-pri">Analisis Otomatis oleh AI</h3>
+                            <p class="eugiat flex-pri">Sistem kami akan memproses informasi menggunakan AI & NLP untuk mendeteksi indikasi hoaks.</p>
                         </div>
                         <div class="stie pb-0 border-bottom-0">
                             <p class="setpSugg">Step 3</p>
-                            <h3 class="gendseratio flex-pri">Create art with your idea</h3>
-                            <p class="eugiat flex-pri">Click to generate a special masterpiece that goes beyond the
-                                usual and captures your imagination.</p>
+                            <h3 class="gendseratio flex-pri">Lihat Hasil dan Rekomendasi</h3>
+                            <p class="eugiat flex-pri">Dapatkan skor kepercayaan, informasi pendukung, dan saran berita terpercaya.</p>
                         </div>
                     </div>
                 </div>
@@ -186,8 +164,8 @@
             <div class="row">
                 <div class="col-xxl-5 col-xl-5 col-lg-5">
                     <h2 class="sec-heding quest"><span> FAQs? </span><br />Pertanyaan yang Sering Ditanyakan</h2>
-                    <p class="dui seci">Explore our FAQ secion, your quick guide to essential insights and
-                        solutions, addressing the most common queries about Power AI.
+                    <p class="dui seci">
+                        Telusuri bagian FAQ kami, panduan cepat untuk menemukan jawaban dan solusi atas pertanyaan umum seputar penggunaan Liepocalypse.
                     </p>
                 </div>
                 <div class="col-xxl-7 col-xl-7 col-lg-7">
@@ -196,15 +174,13 @@
                             <h2 class="accordion-header asd" id="headingOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    How can I get started with Ciri AI’s services?
+                                    Apa itu Liepocalypse?
                                 </button>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    Quis nisi vitae quam cursus facilisis. Arcu eget tincidunt augue auctor mattis. Id
-                                    pharetra quis pellentesque tristique mattis morbi ut etiam purus. Semper suspendisse
-                                    et justo nisl tellus faucibus pharetra. Semper ullamcorper eu sit velit.
+                                    Liepocalypse adalah aplikasi berbasis web yang menggunakan teknologi AI untuk mendeteksi berita hoaks secara cepat dan akurat.
                                 </div>
                             </div>
                         </div>
@@ -212,15 +188,13 @@
                             <h2 class="accordion-header asd" id="headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Ciri AI provide automated service?
+                                    Bagaimana cara menggunakan Liepocalypse?
                                 </button>
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    Donec massa sapien faucibus et molestie ac. Sed blandit libero volutpat sed cras
-                                    ornare arcu. Vulputate mi sit amet mauris. Integer enim neque volutpat ac tincidunt.
-                                    Augue neque gravida in fermentum et sollicitudin.
+                                    Cukup salin dan tempelkan teks atau link berita ke kolom yang tersedia, lalu klik tombol deteksi. Hasil analisis akan langsung ditampilkan.
                                 </div>
                             </div>
                         </div>
@@ -228,15 +202,13 @@
                             <h2 class="accordion-header asd" id="headingThree">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Are there any discounts for annual subscriptions?
+                                    Apakah hasil deteksi Liepocalypse bisa dipercaya?
                                 </button>
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    Donec massa sapien faucibus et molestie ac. Sed blandit libero volutpat sed cras
-                                    ornare arcu. Vulputate mi sit amet mauris. Integer enim neque volutpat ac tincidunt.
-                                    Augue neque gravida in fermentum et sollicitudin.
+                                    Ya. Sistem kami menggunakan model AI dan NLP yang telah dilatih dengan data aktual dan diperbarui secara berkala untuk menjaga akurasi deteksi.
                                 </div>
                             </div>
                         </div>
@@ -244,15 +216,13 @@
                             <h2 class="accordion-header asd" id="headingFour">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    How can I get technical support if I encounter issues?
+                                    Apakah data yang saya masukkan aman?
                                 </button>
                             </h2>
                             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    Donec massa sapien faucibus et molestie ac. Sed blandit libero volutpat sed cras
-                                    ornare arcu. Vulputate mi sit amet mauris. Integer enim neque volutpat ac tincidunt.
-                                    Augue neque gravida in fermentum et sollicitudin.
+                                    Tentu. Kami menghargai privasi Anda. Semua data pengguna tidak disimpan atau dibagikan tanpa izin.
                                 </div>
                             </div>
                         </div>
@@ -261,15 +231,13 @@
                                 <button class="accordion-button collapsed border-bottom-0 pb-0" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
                                     aria-controls="collapseFive">
-                                    Is there an API for integration with other platforms?
+                                    Apa itu skor kepercayaan dalam hasil deteksi?
                                 </button>
                             </h2>
                             <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    Donec massa sapien faucibus et molestie ac. Sed blandit libero volutpat sed cras
-                                    ornare arcu. Vulputate mi sit amet mauris. Integer enim neque volutpat ac tincidunt.
-                                    Augue neque gravida in fermentum et sollicitudin.
+                                    Skor kepercayaan adalah nilai persentase yang menunjukkan seberapa besar kemungkinan sebuah berita tergolong hoaks berdasarkan analisis AI. Semakin rendah skornya, semakin tinggi potensi berita tersebut tidak valid.
                                 </div>
                             </div>
                         </div>

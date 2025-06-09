@@ -23,7 +23,7 @@
                         <li><a class="a-link" href="{{ url('kontak') }}">Kontak Kami</a></li>
                     </ul>
                     <div class="header-buttons-main">
-                        <a href="" class="button2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <a href="{{ route('login') }}" class="button2" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <span>Login</span>
                         </a>
                     </div>
