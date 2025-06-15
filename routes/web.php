@@ -1,53 +1,40 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\Auth\AuthenticatedSessionController;
-use App\Http\Controllers\Auth\PasswordResetLinkController;
-use App\Http\Controllers\Auth\NewPasswordController;
-use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\DetectController;
 
-Route::get('/', function () {
-    return view('index');
-});
+// Auth (biasa)
+Route::post('/login', [LoginController::class, 'login'])->name('login');
+Route::post('/register', [RegisterController::class, 'register'])->name('register');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Guest login
+Route::get('/login/guest', [LoginController::class, 'guest'])->name('login.guest');
 
+// Google login
+Route::get('auth/google', [LoginController::class, 'redirectToGoogle'])->name('login.google');
+Route::get('auth/google/callback', [LoginController::class, 'handleGoogleCallback']);
+
+Route::get('login', [LandingPageController::class, 'login'])->name('login');
+
+Route::get('/', [LandingPageController::class, 'index'])->name('index');
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::post('/deteksi-hoaks', [DetectController::class, 'detect'])->name('deteksi.hoaks');
+    Route::get('riwayat', [LandingPageController::class, 'riwayat'])->name('riwayat');
+    Route::get('tentang', [LandingPageController::class, 'tentang'])->name('tentang');
+    Route::get('langganan', [LandingPageController::class, 'langganan'])->name('langganan');
+    Route::get('kontak', [LandingPageController::class, 'kontak'])->name('kontak');
+    Route::post('/kirim-pesan', [ContactController::class, 'send'])->name('contact.send');
 });
 
-// Login
-Route::get('/login', [AuthenticatedSessionController::class, 'create'])
-    ->name('login')
-    ->middleware('guest');
-Route::post('/login', [AuthenticatedSessionController::class, 'store'])
-    ->middleware('guest');
-
-// Register
-Route::get('/register', [RegisteredUserController::class, 'create'])
-    ->name('register')
-    ->middleware('guest');
-Route::post('/register', [RegisteredUserController::class, 'store'])
-    ->middleware('guest');
-
-// Forgot Password
-Route::get('/forgot-password', [PasswordResetLinkController::class, 'create'])
-    ->name('password.request')
-    ->middleware('guest');
-Route::post('/forgot-password', [PasswordResetLinkController::class, 'store'])
-    ->name('password.email')
-    ->middleware('guest');
-
-// Reset Password
-Route::get('/reset-password/{token}', [NewPasswordController::class, 'create'])
-    ->name('password.reset')
-    ->middleware('guest');
-Route::post('/reset-password', [NewPasswordController::class, 'store'])
-    ->middleware('guest');
-
-require __DIR__.'/auth.php';
+Route::post('/logout', function () {
+    Auth::logout();
+    return redirect('/');
+})->name('logout');
+Route::get('/404', function () {
+    return view('404');
+})->name('notFound');

@@ -2172,6 +2172,62 @@ input[type="url"] {
 .container-demo.active .signinBx .imgBx {
     left: -100%;
 }
+.social-login .button.subscribeBtn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: linear-gradient(90deg, #5c33ff 0%, #00ffb1 100%);
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background 0.3s ease;
+}
+
+.social-login .button.subscribeBtn img {
+    height: 18px;
+}
+
+.social-login .button.subscribeBtn:hover {
+    filter: brightness(1.1);
+}
+.separator {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.separator::before,
+.separator::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.separator::before {
+    left: 0;
+}
+
+.separator::after {
+    right: 0;
+}
+
+.separator span {
+    padding: 0 10px;
+    color: #aaa;
+    font-size: 14px;
+    background-color: transparent;
+}
+
 /*-----------------------[ 20.Bottom top button CSS ]------------------------*/
 button.bottom-top-button {
     position: fixed;

@@ -11,28 +11,73 @@
             <p class="olut">
                 Liepocalypse menggunakan AI untuk mendeteksi hoaks dan memverifikasi informasi dari berbagai sumber.
             </p>
-            <form id="factCheckForm">
+            <form id="factCheckForm" action="{{ route('deteksi.hoaks') }}" method="POST" enctype="multipart/form-data">
+                @csrf
                 <div class="inputGenerate">
                     <div id="inputArea" class="input-field">
-                        <div id="inputError" style="color: red; font-size: 0.9rem; margin-top: 5px; display: none;"></div>
+                        {{-- Default tampil: placeholder perintah --}}
+                        <input type="text" name="defaultInput" id="defaultInput"
+                            placeholder="Pilih input mode terlebih dahulu" style="display: block;" readonly />
+
+                        {{-- Input teks --}}
+                        <textarea name="text" id="textInput" placeholder="Tulis berita di sini..." style="display: none;"></textarea>
+
+                        {{-- Input link --}}
+                        <input type="text" name="url" id="linkInput" placeholder="Masukkan link berita..."
+                            style="display: none;" />
+
+                        {{-- Input gambar --}}
+                        <input type="file" name="file" id="imageInput" accept="image/*" style="display: none;" />
+
+                        <div id="inputError"
+                            style="color: red; font-size: 0.9rem; margin-top: 5px; {{ $errors->has('input_error') ? '' : 'display: none;' }}">
+                            {{ $errors->first('input_error') }}
+                        </div>
                     </div>
-                    <button type="submit" class="button generate-btn">Cek Fakta
-                        <span class="hoverEffect"><span></span></span>
-                    </button>
+
+                    @auth
+                        <button type="submit" class="button generate-btn">Cek Fakta
+                            <span class="hoverEffect"><span></span></span>
+                        </button>
+                    @else
+                        {{-- Jangan pakai type="submit" agar tidak submit form --}}
+                        <button type="button" class="button generate-btn" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Cek Fakta
+                            <span class="hoverEffect"><span></span></span>
+                        </button>
+                    @endauth
                 </div>
             </form>
-            <div class="trust-score-box" id="trustScoreBox" style="display: none;">
-                <p class="trust-title">Skor Kepercayaan Berita:</p>
-                <div class="score-value" id="trustScoreValue">85%</div>
-                <div class="trust-bar">
-                    <div id="trustBarFill" class="trust-fill" style="width: 85%;"></div>
+
+            @if (!empty($result))
+                <div class="result-section mt-4 p-3 border rounded bg-light">
+                    <h4>Hasil Deteksi Hoaks</h4>
+                    <p><strong>Ringkasan:</strong> {{ $result['summary'] }}</p>
+                    <p><strong>Hasil Deteksi:</strong> {{ $result['verdict'] }}</p>
+
+                    @if (!empty($result['related_articles']))
+                        <p><strong>Artikel Pembanding:</strong></p>
+                        <ul>
+                            @foreach ($result['related_articles'] as $link)
+                                <li><a href="{{ $link }}" target="_blank">{{ $link }}</a></li>
+                            @endforeach
+                        </ul>
+                    @endif
                 </div>
-            </div>
+            @endif
+
             <div class="hometags-main">
                 <p class="popTg">Input Mode:</p>
-                <button class="hometags" onclick="setInputMode('text', this)">Teks Manual</button>
-                <button class="hometags" onclick="setInputMode('link', this)">Link Berita</button>
-                <button class="hometags" onclick="setInputMode('image', this)">Gambar Berita</button>
+                @auth
+                    <button class="hometags" data-mode="text">Teks Manual</button>
+                    <button class="hometags" data-mode="link">Link Berita</button>
+                    <button class="hometags" data-mode="image">Gambar Berita</button>
+                @else
+                    <button class="hometags requires-auth" data-mode="text">Teks Manual</button>
+                    <button class="hometags requires-auth" data-mode="link">Link Berita</button>
+                    <button class="hometags requires-auth" data-mode="image">File Berita</button>
+                @endauth
             </div>
         </div>
     </section>
@@ -42,7 +87,9 @@
         <div class="container">
             <h2 class="sec-heding">Fitur <span>Liepocalypse</span></h2>
             <p class="sub-heding">
-                Liepocalypse menyediakan fitur-fitur utama berbasis kecerdasan buatan yang dirancang untuk membantu pengguna dalam mendeteksi dan memverifikasi berita hoaks secara efisien. Fitur-fitur ini dikembangkan berdasarkan kebutuhan masyarakat akan literasi digital yang lebih baik dan akses informasi yang terpercaya.
+                Interdum nec tortor duis sodales amet fermentum. Faucibus ipsum
+                feugiat lectus hendrerit cum eget. Quisque diam massa at quis
+                vestibulum.
             </p>
             <div class="row home-features-row">
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
@@ -52,9 +99,10 @@
                         </div>
                         <span class="img-bg-circle"></span>
                     </div>
-                    <h3 class="gendseratio">Analisis Teks atau Link Berita</h3>
+                    <h3 class="gendseratio">AI-Powered Analysis</h3>
                     <p class="eugiat">
-                        Aplikasi dapat menganalisis teks atau URL berita untuk mendeteksi kemungkinan hoaks menggunakan AI dan NLP (Natural Language Processing).
+                        Feugiat non in potenti velit proin semper. In tellus sit erat
+                        turpis suspendisse tincidunt venenatis quam risus.
                     </p>
                 </div>
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
@@ -66,7 +114,21 @@
                     </div>
                     <h3 class="gendseratio">Skor Kepercayaan</h3>
                     <p class="eugiat">
-                        Memberikan nilai probabilitas (confidence score) apakah berita tersebut kemungkinan hoaks atau tidak.
+                        Nec pulvinar morbi eget justo amet elementum volutpat est arcu.
+                        Libero viverra pellentesque faucibus dignissim.
+                    </p>
+                </div>
+                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                    <div class="features-cir-main">
+                        <div class="features-cir">
+                            <img src="assets/images/svg/features5.svg" alt="features5" />
+                        </div>
+                        <span class="img-bg-circle"></span>
+                    </div>
+                    <h3 class="gendseratio">Privasi Terjamin</h3>
+                    <p class="eugiat">
+                        Nec pulvinar morbi eget justo amet elementum volutpat est arcu.
+                        Libero viverra pellentesque faucibus dignissim.
                     </p>
                 </div>
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
@@ -88,95 +150,55 @@
 @endsection
 @section('template_scripts')
     <script>
-        let currentInputMode = null;
+        document.addEventListener('DOMContentLoaded', function() {
+            const defaultInput = document.getElementById('defaultInput');
+            const textInput = document.getElementById('textInput');
+            const linkInput = document.getElementById('linkInput');
+            const imageInput = document.getElementById('imageInput');
+            const inputError = document.getElementById('inputError');
 
-        document.getElementById("factCheckForm").addEventListener("submit", function(e) {
-            e.preventDefault();
-
-            const formData = new FormData(this);
-
-            const errorBox = document.getElementById("inputError");
-            if (!isInputValid(formData)) {
-                errorBox.textContent = "Silakan pilih input mode dan masukkan data dengan benar.";
-                errorBox.style.display = "block";
+            if (!defaultInput || !textInput || !linkInput || !imageInput) {
+                console.error("Elemen input belum ditemukan di DOM.");
                 return;
-            } else {
-                errorBox.style.display = "none";
             }
 
-            detectFakeNews();
+            function setInputMode(mode, button) {
+                defaultInput.style.display = 'none';
+                textInput.style.display = 'none';
+                linkInput.style.display = 'none';
+                imageInput.style.display = 'none';
+
+                if (mode === 'text') {
+                    textInput.style.display = 'block';
+                } else if (mode === 'link') {
+                    linkInput.style.display = 'block';
+                } else if (mode === 'image') {
+                    imageInput.style.display = 'block';
+                }
+
+                if (inputError) inputError.style.display = 'none';
+
+                document.querySelectorAll('.hometags').forEach(btn => btn.classList.remove('active'));
+                if (button) button.classList.add('active');
+            }
+
+            document.querySelectorAll('.hometags').forEach(button => {
+                button.addEventListener('click', function() {
+                    const mode = this.dataset.mode;
+                    setInputMode(mode, this);
+                });
+            });
+
+            // Script khusus guest
+            @guest
+            document.querySelectorAll('.requires-auth').forEach(el => {
+                el.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+                    modal.show();
+                });
+            });
+        @endguest
         });
-
-        if (mode === "text") {
-            inputArea.innerHTML = `
-        <textarea name="textInput" rows="5" placeholder="Tulis teks berita di sini..." required></textarea>
-        <div id="inputError" style="color: red; font-size: 0.9rem; margin-top: 5px; display: none;"></div>
-    `;
-        } else if (mode === "link") {
-            inputArea.innerHTML = `
-        <input type="url" name="linkInput" placeholder="Masukkan link berita..." required />
-        <div id="inputError" style="color: red; font-size: 0.9rem; margin-top: 5px; display: none;"></div>
-    `;
-        } else if (mode === "image") {
-            inputArea.innerHTML = `
-        <div class="custom-file-input-wrapper">
-            <label for="fileUpload" class="custom-file-label">Pilih Gambar Berita</label>
-            <input type="file" id="fileUpload" name="imageInput" accept="image/*" onchange="updateFileName(this)" />
-            <span id="file-name">Belum ada file</span>
-        </div>
-        <div id="inputError" style="color: red; font-size: 0.9rem; margin-top: 5px; display: none;"></div>
-    `;
-        }
-
-        function isInputValid(formData) {
-            if (currentInputMode === "text") {
-                return formData.get("textInput")?.trim().length > 0;
-            } else if (currentInputMode === "link") {
-                return formData.get("linkInput")?.trim().length > 0;
-            } else if (currentInputMode === "image") {
-                return formData.get("imageInput")?.name?.length > 0;
-            }
-            return false;
-        }
-
-        function detectFakeNews() {
-            const score = Math.floor(Math.random() * 101); // Skor acak 0-100%
-            document.getElementById('trustScoreValue').textContent = score + '%';
-            document.getElementById('trustBarFill').style.width = score + '%';
-            document.getElementById('trustScoreBox').style.display = 'block';
-        }
-
-        function setInputMode(mode, el) {
-            currentInputMode = mode; // simpan input mode yang dipilih
-
-            document.querySelectorAll('.hometags').forEach(btn => btn.classList.remove('active'));
-            el.classList.add('active');
-
-            const inputArea = document.getElementById("inputArea");
-
-            if (mode === "text") {
-                inputArea.innerHTML =
-                    `<textarea name="textInput" rows="5" placeholder="Tulis teks berita di sini..." required></textarea>`;
-            } else if (mode === "link") {
-                inputArea.innerHTML =
-                    `<input type="url" name="linkInput" placeholder="Masukkan link berita..." required />`;
-            } else if (mode === "image") {
-                inputArea.innerHTML = `
-            <div class="custom-file-input-wrapper">
-                <label for="fileUpload" class="custom-file-label">Pilih Gambar Berita</label>
-                <input type="file" id="fileUpload" name="imageInput" accept="image/*" onchange="updateFileName(this)" />
-                <span id="file-name">Belum ada file</span>
-            </div>
-        `;
-            }
-        }
-
-        function updateFileName(input) {
-            const fileName = input.files.length > 0 ? input.files[0].name : "Belum ada file";
-            document.getElementById("file-name").textContent = fileName;
-
-            document.querySelectorAll('.hometags').forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-        }
     </script>
 @endsection

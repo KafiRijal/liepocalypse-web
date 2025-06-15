@@ -10,17 +10,37 @@
                 Tentang Kami<span> Liepocalypse</span>
             </h2>
             <p class="sub-heding">
-                We're passionate about empowering creatives with the tools they need
-                to bring their vision to life that's why we've developed.
+                Liepocalypse hadir untuk membantu masyarakat memeriksa kebenaran informasi dengan teknologi AI, demi
+                terciptanya ruang digital yang sehat dan bertanggung jawab.
             </p>
             <div class="row marketingRow">
                 <div class="col-xxl-6 col-xl-6">
                     <p class="dui pb-2">
-                        Kami percaya bahwa kekuatan informasi yang benar dapat membentuk masyarakat yang lebih cerdas dan kritis. Karena itu, kami mengembangkan Liepocalypse — sebuah solusi cerdas untuk membantu pengguna mendeteksi berita hoaks dengan cepat, mudah, dan akurat.
-                    </p>
-                    <p class="dui">
-                        Liepocalypse hadir sebagai jawaban atas kebutuhan akan literasi digital yang semakin penting di era informasi. Kami memadukan teknologi Artificial Intelligence (AI) dan Natural Language Processing (NLP) untuk menghadirkan platform pendeteksi hoaks berbasis web yang praktis, modern, dan dapat diandalkan oleh siapa saja.
-                    </p>
+                        <<<<<<< HEAD Kami percaya bahwa kekuatan informasi yang benar dapat membentuk masyarakat yang lebih
+                            cerdas dan kritis. Karena itu, kami mengembangkan Liepocalypse — sebuah solusi cerdas untuk
+                            membantu pengguna mendeteksi berita hoaks dengan cepat, mudah, dan akurat. </p>
+                            <p class="dui">
+                                Liepocalypse hadir sebagai jawaban atas kebutuhan akan literasi digital yang semakin penting
+                                di era informasi. Kami memadukan teknologi Artificial Intelligence (AI) dan Natural Language
+                                Processing (NLP) untuk menghadirkan platform pendeteksi hoaks berbasis web yang praktis,
+                                modern, dan dapat diandalkan oleh siapa saja.
+                                =======
+                                Kami percaya bahwa kekuatan informasi yang benar dapat membentuk masyarakat yang lebih
+                                cerdas dan
+                                kritis. Karena itu, kami mengembangkan Liepocalypse — sebuah solusi cerdas untuk membantu
+                                pengguna
+                                mendeteksi berita hoaks dengan cepat, mudah, dan akurat.
+                            </p>
+                            <p class="dui">
+                                Liepocalypse hadir sebagai jawaban atas kebutuhan akan literasi digital yang semakin penting
+                                di era
+                                informasi. Kami memadukan teknologi Artificial Intelligence (AI) dan Natural Language
+                                Processing
+                                (NLP) untuk menghadirkan platform pendeteksi hoaks berbasis web yang praktis, modern, dan
+                                dapat
+                                diandalkan oleh siapa saja.
+                                >>>>>>> 54357f4 (Update backend)
+                            </p>
                 </div>
                 <div class="col-xxl-6 col-xl-6">
                     <div class="quis-head">
@@ -75,13 +95,32 @@
                         Mengapa Harus Memilih Kami? <span>Liepocalypse</span>
                     </h2>
                     <p class="dui pb-2">
-                        Di tengah maraknya penyebaran berita palsu, Liepocalypse hadir sebagai solusi terpercaya untuk membantu Anda memilah informasi yang benar. Kami tidak hanya menyediakan alat deteksi hoaks berbasis AI, tetapi juga pengalaman yang mudah, cepat, dan akurat untuk semua kalangan.
+                        <<<<<<< HEAD Di tengah maraknya penyebaran berita palsu, Liepocalypse hadir sebagai solusi
+                            terpercaya untuk membantu Anda memilah informasi yang benar. Kami tidak hanya menyediakan alat
+                            deteksi hoaks berbasis AI, tetapi juga pengalaman yang mudah, cepat, dan akurat untuk semua
+                            kalangan. </p>
+                            <p class="dui">
+                                Jangan biarkan dirimu tertipu hoaks! Gunakan Liepocalypse untuk mendeteksi berita palsu
+                                secara instan, mudah, dan akurat. Ditenagai oleh AI dan NLP terkini, aplikasi ini siap jadi
+                                alat bantu andalanmu dalam literasi digital.
+                            </p>
+                            <div class="tryImage-btn-main grnezQ">
+                                <a href="#" class="button">
+                                    =======
+                                    Di tengah maraknya penyebaran berita palsu, Liepocalypse hadir sebagai solusi terpercaya
+                                    untuk
+                                    membantu Anda memilah informasi yang benar. Kami tidak hanya menyediakan alat deteksi
+                                    hoaks berbasis
+                                    AI, tetapi juga pengalaman yang mudah, cepat, dan akurat untuk semua kalangan.
                     </p>
                     <p class="dui">
-                        Jangan biarkan dirimu tertipu hoaks! Gunakan Liepocalypse untuk mendeteksi berita palsu secara instan, mudah, dan akurat. Ditenagai oleh AI dan NLP terkini, aplikasi ini siap jadi alat bantu andalanmu dalam literasi digital.
+                        Jangan biarkan dirimu tertipu hoaks! Gunakan Liepocalypse untuk mendeteksi berita palsu secara
+                        instan, mudah, dan akurat. Ditenagai oleh AI dan NLP terkini, aplikasi ini siap jadi alat bantu
+                        andalanmu dalam literasi digital.
                     </p>
                     <div class="tryImage-btn-main grnezQ">
-                        <a href="#" class="button">
+                        <a href="{{ url('/') }}" class="button">
+                            >>>>>>> 54357f4 (Update backend)
                             Coba Sekarang
                             <span class="hoverEffect">
                                 <span></span>
@@ -98,7 +137,10 @@
                             </p>
                         </div>
                         <h3 class="rnaip">
-                            Sistem AI dan NLP kami mampu menganalisis teks atau link berita untuk mendeteksi potensi hoaks secara cepat dan akurat.
+                            <<<<<<< HEAD Sistem AI dan NLP kami mampu menganalisis teks atau link berita untuk mendeteksi
+                                potensi hoaks secara cepat dan akurat.=======Sistem AI dan NLP kami mampu menganalisis teks
+                                atau link berita untuk mendeteksi potensi hoaks secara cepat dan akurat.>>>>>>> 54357f4
+                                (Update backend)
                         </h3>
                     </div>
                     <div class="exce-box">
@@ -109,7 +151,10 @@
                             </p>
                         </div>
                         <h3 class="rnaip">
-                            Liepocalypse memberikan saran berita serupa dari sumber terpercaya untuk membantu pengguna melakukan verifikasi kebenaran berita.
+                            <<<<<<< HEAD Liepocalypse memberikan saran berita serupa dari sumber terpercaya untuk membantu
+                                pengguna melakukan verifikasi kebenaran berita.=======Liepocalypse memberikan saran berita
+                                serupa dari sumber terpercaya untuk membantu pengguna melakukan verifikasi kebenaran
+                                berita.>>>>>>> 54357f4 (Update backend)
                         </h3>
                     </div>
                     <div class="exce-box mb-0">
@@ -120,7 +165,10 @@
                             </p>
                         </div>
                         <h3 class="rnaip">
-                            Semua aktivitas pengecekan berita akan tersimpan dalam riwayat pengguna sehingga mudah diakses kembali kapan saja.
+                            <<<<<<< HEAD Semua aktivitas pengecekan berita akan tersimpan dalam riwayat pengguna sehingga
+                                mudah diakses kembali kapan saja.=======Semua aktivitas pengecekan berita akan tersimpan
+                                dalam riwayat pengguna sehingga mudah diakses kembali kapan saja.>>>>>>> 54357f4 (Update
+                                backend)
                     </div>
                 </div>
             </div>
@@ -131,31 +179,55 @@
         <img class="blue-gardient3" src="assets/images/home-page/blue-gardient3.png" alt="blue-gardient3">
         <div class="container">
             <h2 class="sec-heding"> Cara Kerja <span>Liepocalypse</span></h2>
-            <p class="sub-heding">Deteksi hoaks kini lebih mudah! Ikuti 3 langkah sederhana berikut untuk memverifikasi berita secara instan:</p>
-            <div class="wrapper">
-                <div class="sugg-box">
-                    <div class="sugg-img-main">
-                        <img class="sugg-img" src="assets/images/home-page/sugg-img1.jpg" alt="sugg-img1">
-                    </div>
-                    <div>
-                        <div class="stie pt-0">
-                            <p class="setpSugg">Step 1</p>
-                            <h3 class="gendseratio flex-pri">Masukkan Teks atau Link Berita, dan Gambar</h3>
-                            <p class="eugiat flex-pri">Tempelkan teks atau URL berita, atau upload gambar yang ingin kamu periksa.</p>
+            <<<<<<< HEAD <p class="sub-heding">Deteksi hoaks kini lebih mudah! Ikuti 3 langkah sederhana berikut untuk
+                memverifikasi berita secara instan:</p>
+                =======
+                <p class="sub-heding">Deteksi hoaks kini lebih mudah! Ikuti 3 langkah sederhana berikut untuk memverifikasi
+                    berita secara instan:</p>
+                >>>>>>> 54357f4 (Update backend)
+                <div class="wrapper">
+                    <div class="sugg-box">
+                        <div class="col-xxl-6 col-xl-6 col-lg-6">
+                            <img class="shoot-fanta" src="{{ asset('assets/images/svg/kontak.svg') }}"
+                                alt="tentang-liepocalypse">
                         </div>
-                        <div class="stie">
-                            <p class="setpSugg">Step 2</p>
-                            <h3 class="gendseratio flex-pri">Analisis Otomatis oleh AI</h3>
-                            <p class="eugiat flex-pri">Sistem kami akan memproses informasi menggunakan AI & NLP untuk mendeteksi indikasi hoaks.</p>
-                        </div>
-                        <div class="stie pb-0 border-bottom-0">
-                            <p class="setpSugg">Step 3</p>
-                            <h3 class="gendseratio flex-pri">Lihat Hasil dan Rekomendasi</h3>
-                            <p class="eugiat flex-pri">Dapatkan skor kepercayaan, informasi pendukung, dan saran berita terpercaya.</p>
+                        <div>
+                            <div class="stie pt-0">
+                                <p class="setpSugg">Step 1</p>
+                                <h3 class="gendseratio flex-pri">Masukkan Teks atau Link Berita, dan Gambar</h3>
+                                <<<<<<< HEAD <p class="eugiat flex-pri">Tempelkan teks atau URL berita, atau upload gambar
+                                    yang ingin kamu periksa.</p>
+                                    =======
+                                    <p class="eugiat flex-pri">Tempelkan teks atau URL berita, atau upload gambar yang ingin
+                                        kamu
+                                        periksa.</p>
+                                    >>>>>>> 54357f4 (Update backend)
+                            </div>
+                            <div class="stie">
+                                <p class="setpSugg">Step 2</p>
+                                <h3 class="gendseratio flex-pri">Analisis Otomatis oleh AI</h3>
+                                <<<<<<< HEAD <p class="eugiat flex-pri">Sistem kami akan memproses informasi menggunakan AI
+                                    & NLP untuk mendeteksi indikasi hoaks.</p>
+                                    =======
+                                    <p class="eugiat flex-pri">Sistem kami akan memproses informasi menggunakan AI & NLP
+                                        untuk
+                                        mendeteksi indikasi hoaks.</p>
+                                    >>>>>>> 54357f4 (Update backend)
+                            </div>
+                            <div class="stie pb-0 border-bottom-0">
+                                <p class="setpSugg">Step 3</p>
+                                <h3 class="gendseratio flex-pri">Lihat Hasil dan Rekomendasi</h3>
+                                <<<<<<< HEAD <p class="eugiat flex-pri">Dapatkan skor kepercayaan, informasi pendukung, dan
+                                    saran berita terpercaya.</p>
+                                    =======
+                                    <p class="eugiat flex-pri">Dapatkan skor kepercayaan, informasi pendukung, dan saran
+                                        berita
+                                        terpercaya.</p>
+                                    >>>>>>> 54357f4 (Update backend)
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
     </section>
     <!-- ======================================  About-Section Five ===================================== -->
@@ -165,7 +237,10 @@
                 <div class="col-xxl-5 col-xl-5 col-lg-5">
                     <h2 class="sec-heding quest"><span> FAQs? </span><br />Pertanyaan yang Sering Ditanyakan</h2>
                     <p class="dui seci">
-                        Telusuri bagian FAQ kami, panduan cepat untuk menemukan jawaban dan solusi atas pertanyaan umum seputar penggunaan Liepocalypse.
+                        <<<<<<< HEAD Telusuri bagian FAQ kami, panduan cepat untuk menemukan jawaban dan solusi atas
+                            pertanyaan umum seputar penggunaan Liepocalypse.=======Telusuri bagian FAQ kami, panduan cepat
+                            untuk menemukan jawaban dan solusi atas pertanyaan umum seputar penggunaan Liepocalypse.>>>>>>>
+                            54357f4 (Update backend)
                     </p>
                 </div>
                 <div class="col-xxl-7 col-xl-7 col-lg-7">
@@ -180,7 +255,10 @@
                             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    Liepocalypse adalah aplikasi berbasis web yang menggunakan teknologi AI untuk mendeteksi berita hoaks secara cepat dan akurat.
+                                    <<<<<<< HEAD Liepocalypse adalah aplikasi berbasis web yang menggunakan teknologi AI
+                                        untuk mendeteksi berita hoaks secara cepat dan akurat.=======Liepocalypse adalah
+                                        aplikasi berbasis web yang menggunakan teknologi AI untuk mendeteksi berita hoaks
+                                        secara cepat dan akurat.>>>>>>> 54357f4 (Update backend)
                                 </div>
                             </div>
                         </div>
@@ -194,7 +272,8 @@
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    Cukup salin dan tempelkan teks atau link berita ke kolom yang tersedia, lalu klik tombol deteksi. Hasil analisis akan langsung ditampilkan.
+                                    Cukup salin dan tempelkan teks atau link berita ke kolom yang tersedia, lalu klik tombol
+                                    deteksi. Hasil analisis akan langsung ditampilkan.
                                 </div>
                             </div>
                         </div>
@@ -208,7 +287,11 @@
                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    Ya. Sistem kami menggunakan model AI dan NLP yang telah dilatih dengan data aktual dan diperbarui secara berkala untuk menjaga akurasi deteksi.
+                                    <<<<<<< HEAD Ya. Sistem kami menggunakan model AI dan NLP yang telah dilatih dengan data
+                                        aktual dan diperbarui secara berkala untuk menjaga akurasi deteksi.=======Ya. Sistem
+                                        kami menggunakan model AI dan NLP yang telah dilatih dengan data aktual dan
+                                        diperbarui secara berkala untuk menjaga akurasi deteksi.>>>>>>> 54357f4 (Update
+                                        backend)
                                 </div>
                             </div>
                         </div>
@@ -222,7 +305,9 @@
                             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    Tentu. Kami menghargai privasi Anda. Semua data pengguna tidak disimpan atau dibagikan tanpa izin.
+                                    <<<<<<< HEAD Tentu. Kami menghargai privasi Anda. Semua data pengguna tidak disimpan
+                                        atau dibagikan tanpa izin.=======Tentu. Kami menghargai privasi Anda. Semua data
+                                        pengguna tidak disimpan atau dibagikan tanpa izin.>>>>>>> 54357f4 (Update backend)
                                 </div>
                             </div>
                         </div>
@@ -237,7 +322,12 @@
                             <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    Skor kepercayaan adalah nilai persentase yang menunjukkan seberapa besar kemungkinan sebuah berita tergolong hoaks berdasarkan analisis AI. Semakin rendah skornya, semakin tinggi potensi berita tersebut tidak valid.
+                                    <<<<<<< HEAD Skor kepercayaan adalah nilai persentase yang menunjukkan seberapa besar
+                                        kemungkinan sebuah berita tergolong hoaks berdasarkan analisis AI. Semakin rendah
+                                        skornya, semakin tinggi potensi berita tersebut tidak valid.=======Skor kepercayaan
+                                        adalah nilai persentase yang menunjukkan seberapa besar kemungkinan sebuah berita
+                                        tergolong hoaks berdasarkan analisis AI. Semakin rendah skornya, semakin tinggi
+                                        potensi berita tersebut tidak valid.>>>>>>> 54357f4 (Update backend)
                                 </div>
                             </div>
                         </div>
