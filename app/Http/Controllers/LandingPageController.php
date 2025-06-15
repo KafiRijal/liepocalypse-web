@@ -14,6 +14,11 @@ class LandingPageController extends Controller
     {
         return view('riwayat');
     }
+
+    public function hasil()
+    {
+        return view('deteksi.hasil');
+    }
     public function tentang()
     {
         return view('tentang');

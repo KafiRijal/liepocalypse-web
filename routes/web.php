@@ -24,10 +24,12 @@ Route::get('login', [LandingPageController::class, 'login'])->name('login');
 Route::get('/', [LandingPageController::class, 'index'])->name('index');
 Route::middleware('auth')->group(function () {
     Route::post('/deteksi-hoaks', [DetectController::class, 'detect'])->name('deteksi.hoaks');
+    Route::post('/clear-session', [App\Http\Controllers\DetectController::class, 'clearSession'])->name('clear.session');
     Route::get('riwayat', [LandingPageController::class, 'riwayat'])->name('riwayat');
     Route::get('tentang', [LandingPageController::class, 'tentang'])->name('tentang');
     Route::get('langganan', [LandingPageController::class, 'langganan'])->name('langganan');
     Route::get('kontak', [LandingPageController::class, 'kontak'])->name('kontak');
+    Route::get('hasil', [LandingPageController::class, 'hasil'])->name('hasil');
     Route::post('/kirim-pesan', [ContactController::class, 'send'])->name('contact.send');
 });
 
