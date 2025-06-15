@@ -50,16 +50,32 @@
                 </div>
             </form>
 
-            @if (!empty($result))
-                <div class="result-section mt-4 p-3 border rounded bg-light">
-                    <h4>Hasil Deteksi Hoaks</h4>
-                    <p><strong>Ringkasan:</strong> {{ $result['summary'] }}</p>
-                    <p><strong>Hasil Deteksi:</strong> {{ $result['verdict'] }}</p>
+            @php
+                $result = session('result');
+            @endphp
 
-                    @if (!empty($result['related_articles']))
-                        <p><strong>Artikel Pembanding:</strong></p>
-                        <ul>
-                            @foreach ($result['related_articles'] as $link)
+            @if ($result)
+                <div class="result-hoax-box relative">
+                    <h2 class="result-title">Hasil Deteksi Hoaks</h2>
+
+                    <!-- Tombol Clear -->
+                    <form action="{{ route('clear.session') }}" method="POST"
+                        style="position: absolute; top: 1rem; right: 1rem;">
+                        @csrf
+                        <button type="submit" class="clear-button">Reset Deteksi</button>
+                    </form>
+
+                    <p><strong>📝 Ringkasan:</strong> {{ $result->summary ?? '-' }}</p>
+
+                    <p>
+                        <strong>✅ Hasil Deteksi:</strong>
+                        <span class="verdict-result">{{ $result->verdict ?? '-' }}</span>
+                    </p>
+
+                    @if (!empty($result->related_articles))
+                        <p><strong>🔗 Artikel Pembanding:</strong></p>
+                        <ul class="related-links">
+                            @foreach ($result->related_articles as $link)
                                 <li><a href="{{ $link }}" target="_blank">{{ $link }}</a></li>
                             @endforeach
                         </ul>
@@ -139,23 +155,29 @@
 @section('template_scripts')
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const defaultInput = document.getElementById('defaultInput');
-            const textInput = document.getElementById('textInput');
-            const linkInput = document.getElementById('linkInput');
-            const imageInput = document.getElementById('imageInput');
-            const inputError = document.getElementById('inputError');
-
-            if (!defaultInput || !textInput || !linkInput || !imageInput) {
-                console.error("Elemen input belum ditemukan di DOM.");
-                return;
-            }
+            let currentMode = null;
 
             function setInputMode(mode, button) {
+                currentMode = mode;
+
+                const defaultInput = document.getElementById('defaultInput');
+                const textInput = document.getElementById('textInput');
+                const linkInput = document.getElementById('linkInput');
+                const imageInput = document.getElementById('imageInput');
+                const inputError = document.getElementById('inputError');
+
+                if (!defaultInput || !textInput || !linkInput || !imageInput) {
+                    console.error("Salah satu elemen input tidak ditemukan.");
+                    return;
+                }
+
+                // Sembunyikan semua input
                 defaultInput.style.display = 'none';
                 textInput.style.display = 'none';
                 linkInput.style.display = 'none';
                 imageInput.style.display = 'none';
 
+                // Tampilkan sesuai mode
                 if (mode === 'text') {
                     textInput.style.display = 'block';
                 } else if (mode === 'link') {
@@ -166,26 +188,30 @@
 
                 if (inputError) inputError.style.display = 'none';
 
+                // Highlight tombol aktif
                 document.querySelectorAll('.hometags').forEach(btn => btn.classList.remove('active'));
                 if (button) button.classList.add('active');
             }
 
+            // Pasang event listener hanya untuk user yang login
+            @auth
             document.querySelectorAll('.hometags').forEach(button => {
                 button.addEventListener('click', function() {
-                    const mode = this.dataset.mode;
+                    const mode = this.textContent.trim().toLowerCase().includes('teks') ? 'text' :
+                        this.textContent.trim().toLowerCase().includes('link') ? 'link' : 'image';
                     setInputMode(mode, this);
                 });
             });
+        @endauth
 
-            // Script khusus guest
-            @guest
-            document.querySelectorAll('.requires-auth').forEach(el => {
-                el.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const modal = new bootstrap.Modal(document.getElementById('exampleModal'));
-                    modal.show();
-                });
+        // Script khusus guest
+        @guest document.querySelectorAll('.requires-auth').forEach(el => {
+            el.addEventListener('click', function(e) {
+                e.preventDefault();
+                const modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+                modal.show();
             });
+        });
         @endguest
         });
     </script>
