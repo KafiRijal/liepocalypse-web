@@ -17,15 +17,37 @@
                             </a>
                         </li>
                         <li><a class="a-link" href="{{ url('/') }}">Deteksi Hoaks</a></li>
-                        <li><a class="a-link" href="{{ url('riwayat') }}">Riwayat</a></li>
-                        <li><a class="a-link" href="{{ url('tentang') }}">Tentang Kami</a></li>
-                        <li><a class="a-link" href="{{ url('langganan') }}">Langganan</a></li>
-                        <li><a class="a-link" href="{{ url('kontak') }}">Kontak Kami</a></li>
+
+                        @auth
+                            <li><a class="a-link" href="{{ url('riwayat') }}">Riwayat</a></li>
+                            <li><a class="a-link" href="{{ url('tentang') }}">Tentang Kami</a></li>
+                            <li><a class="a-link" href="{{ url('langganan') }}">Langganan</a></li>
+                            <li><a class="a-link" href="{{ url('kontak') }}">Kontak Kami</a></li>
+                        @else
+                            <li><a href="#" class="a-link" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">Riwayat</a></li>
+                            <li><a href="#" class="a-link" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">Tentang Kami</a></li>
+                            <li><a href="#" class="a-link" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">Langganan</a></li>
+                            <li><a href="#" class="a-link" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">Kontak Kami</a></li>
+                        @endauth
                     </ul>
+
                     <div class="header-buttons-main">
-                        <a href="" class="button2" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            <span>Login</span>
-                        </a>
+                        @auth
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <button type="submit" class="button2">
+                                    <span>Logout</span>
+                                </button>
+                            </form>
+                        @else
+                            <a href="#" class="button2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <span>Masuk</span>
+                            </a>
+                        @endauth
                     </div>
                 </div>
             </nav>
@@ -42,18 +64,41 @@
                     <div class="container-demo">
                         <div class="user signinBx">
                             <div class="imgBx">
-                                <img src="assets/images/home-page/form-img1.jpg" alt="form-img1" />
+                                <img style="max-width: 100%; height: auto; margin: auto; display: block;"
+                                    src="{{ asset('assets/images/svg/login.svg') }}" alt="form-img1" />
                             </div>
                             <div class="formBx">
-                                <form>
+                                <form method="POST" action="{{ route('login') }}">
+                                    @csrf
                                     <h2>Sign In</h2>
-                                    <input type="text" name="username" placeholder="Username" autocomplete="off" />
-                                    <input type="password" name="password" placeholder="Password" autocomplete="off" />
-                                    <a href="#" class="button subscribeBtn">Login
-                                        <span class="hoverEffect">
-                                            <span></span>
-                                        </span>
-                                    </a>
+                                    <div class="social-login">
+                                        <button type="button" class="button subscribeBtn"
+                                            onclick="window.location.href='{{ route('login.guest') }}'">
+                                            Login as Guest
+                                            <span class="hoverEffect">
+                                                <span></span>
+                                            </span>
+                                        </button>
+
+                                        <a href="{{ route('login.google') }}" class="button subscribeBtn"
+                                            style="margin-top: 10px;">
+                                            <img src="{{ asset('assets/images/svg/google.svg') }}" alt="Google Logo"
+                                                style="height: 16px; vertical-align: middle; margin-right: 8px;">
+                                            Sign in with Google
+                                            <span class="hoverEffect">
+                                                <span></span>
+                                            </span>
+                                        </a>
+
+                                        <!-- Pemisah -->
+                                        <div class="separator">
+                                            <span>OR</span>
+                                        </div>
+                                    </div>
+
+                                    <input type="text" name="username" placeholder="Username" required />
+                                    <input type="password" name="password" placeholder="Password" required />
+                                    <button type="submit" class="button subscribeBtn">Login</button>
                                     <p class="signup">
                                         Don't have an account ?
                                         <a href="javascript:void(0);" onclick="toggleForm();">Sign Up</a>
@@ -63,20 +108,15 @@
                         </div>
                         <div class="user signupBx">
                             <div class="formBx">
-                                <form>
+                                <form method="POST" action="{{ route('register') }}">
+                                    @csrf
                                     <h2>Create an account</h2>
-                                    <input type="text" name="username" placeholder="Username" autocomplete="off" />
-                                    <input type="email" name="email" placeholder="Email Address"
-                                        autocomplete="off" />
-                                    <input type="password" name="cpass" placeholder="Create Password"
-                                        autocomplete="off" />
-                                    <input type="password" name="conPass" placeholder="Confirm Password"
-                                        autocomplete="off" />
-                                    <a href="#" class="button subscribeBtn">Sign Up
-                                        <span class="hoverEffect">
-                                            <span></span>
-                                        </span>
-                                    </a>
+                                    <input type="text" name="username" placeholder="Username" required />
+                                    <input type="email" name="email" placeholder="Email Address" required />
+                                    <input type="password" name="password" placeholder="Create Password" required />
+                                    <input type="password" name="password_confirmation"
+                                        placeholder="Confirm Password" required />
+                                    <button type="submit" class="button subscribeBtn">Sign Up</button>
                                     <p class="signup">
                                         Already have an account ?
                                         <a href="javascript:void(0);" onclick="toggleForm();">Sign in</a>
@@ -84,7 +124,8 @@
                                 </form>
                             </div>
                             <div class="imgBx">
-                                <img src="assets/images/home-page/form-img2.jpg" alt=" form-img2" />
+                                <img style="max-width: 100%; height: auto; margin: auto; display: block;"
+                                    src="{{ asset('assets/images/svg/login.svg') }}" alt=" form-img2" />
                             </div>
                         </div>
                     </div>
@@ -92,3 +133,19 @@
             </div>
         </div>
     </div>
+
+    {{-- @section('template_scripts')
+        @guest
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.querySelectorAll('.requires-auth').forEach(el => {
+                        el.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            const modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+                            modal.show();
+                        });
+                    });
+                });
+            </script>
+        @endguest
+    @endsection --}}
