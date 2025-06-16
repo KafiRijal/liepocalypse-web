@@ -546,6 +546,25 @@ nav {
     opacity: 0.9;
 }
 
+.custom-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #ccc;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 10px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .hometags-main {
     display: flex;
     justify-content: center; /* Ini yang bikin ke tengah */
@@ -699,6 +718,75 @@ input[type="url"] {
 
 #historyList li:hover {
     background: #1e40af;
+}
+
+.custom-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.pagination-list {
+    list-style: none;
+    display: flex;
+    gap: 6px;
+    padding: 0;
+    margin: 0;
+}
+
+.pagination-list li {
+    display: inline-block;
+}
+
+.pagination-list a,
+.pagination-list span {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 6px;
+    background-color: #1f2937;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.pagination-list a:hover {
+    background-color: #4b5563;
+}
+
+.pagination-list .active span {
+    background-color: #6e00ff;
+    font-weight: bold;
+}
+
+.pagination-list .disabled span {
+    opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+    .riwayat-layout {
+        flex-direction: column;
+    }
+
+    .sidebar,
+    .detail-panel {
+        width: 100% !important;
+    }
+
+    .result-hoax-box {
+        padding: 16px;
+        font-size: 14px;
+    }
+
+    .pagination-container nav {
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .pagination .page-link {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
 }
 
 .detail-panel {
