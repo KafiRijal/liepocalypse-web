@@ -49,6 +49,10 @@
                     @endauth
                 </div>
             </form>
+            <div id="loadingIndicator" style="display: none; text-align: center; margin-top: 20px;">
+                <div class="custom-spinner"></div>
+                <p style="color:#00ffc2">Sedang mendeteksi...</p>
+            </div>
 
             @php
                 $result = session('result');
@@ -88,7 +92,7 @@
                 @auth
                     <button class="hometags" data-mode="text">Teks Manual</button>
                     <button class="hometags" data-mode="link">Link Berita</button>
-                    <button class="hometags" data-mode="image">Gambar Berita</button>
+                    <button class="hometags" data-mode="image">File Berita</button>
                 @else
                     <button class="hometags requires-auth" data-mode="text">Teks Manual</button>
                     <button class="hometags requires-auth" data-mode="link">Link Berita</button>
@@ -213,6 +217,10 @@
             });
         });
         @endguest
+        });
+
+        document.getElementById('factCheckForm')?.addEventListener('submit', function() {
+            document.getElementById('loadingIndicator').style.display = 'block';
         });
     </script>
 @endsection

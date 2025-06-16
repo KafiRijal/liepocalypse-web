@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use App\Models\Riwayat;
+use Illuminate\Support\Facades\Auth;
 
 class DetectController extends Controller
 {
-
     public function clearSession()
     {
         session()->forget('result');
@@ -53,11 +54,11 @@ class DetectController extends Controller
                 curl_setopt($curl, CURLOPT_CUSTOMREQUEST, $method);
 
                 if ($t == 'json' && is_array($data)) {
-                    curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($data)); // ✅ encode JSON
+                    curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($data));
                 } elseif ($t == 'form') {
-                    curl_setopt($curl, CURLOPT_POSTFIELDS, $data); // ✅ biarkan array (multipart/form-data)
+                    curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
                 } else {
-                    curl_setopt($curl, CURLOPT_POSTFIELDS, $data); // fallback
+                    curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
                 }
                 break;
         }
@@ -67,6 +68,7 @@ class DetectController extends Controller
 
         return json_decode($curl_response);
     }
+
     public function detect(Request $request)
     {
         $textInput = $request->input('text');
@@ -80,35 +82,33 @@ class DetectController extends Controller
         $flaskApiUrl = 'http://127.0.0.1:5000/api/detect';
 
         try {
+            // Gunakan input text/url/file sebagai satu variabel
+            $inputText = $request->text ?? $request->url ?? ($imageInput ? $imageInput->getClientOriginalName() : null);
+
             if (!empty($textInput)) {
-                $response = $this->api('POST', $flaskApiUrl, 'form', null, [
-                    'text' => $textInput,
-                ]);
-                session(['result' => $response]);
-
-                // Redirect ke halaman hasil
-                return redirect()->route('index');
+                $response = $this->api('POST', $flaskApiUrl, 'form', null, ['text' => $textInput]);
             } elseif (!empty($linkInput)) {
-                $response = $this->api('POST', $flaskApiUrl, 'form', null, [
-                    'url' => $linkInput,
-                ]);
-
-                // Simpan ke session secara eksplisit
-                session(['result' => $response]);
-
-                // Redirect ke halaman hasil
-                return redirect()->route('index');
+                $response = $this->api('POST', $flaskApiUrl, 'form', null, ['url' => $linkInput]);
             } elseif ($imageInput) {
                 $response = $this->api('POST', $flaskApiUrl, 'form', null, [
                     'file' => curl_file_create($imageInput->getPathname(), $imageInput->getMimeType(), $imageInput->getClientOriginalName()),
                 ]);
-                session(['result' => $response]);
-
-                // Redirect ke halaman hasil
-                return redirect()->route('index');
-            } else {
-                return back()->with('error', 'Tidak ada input yang diberikan.');
             }
+
+            session(['result' => $response]);
+
+            // Simpan ke tabel riwayats jika deteksi sukses
+            if ($response && isset($response->summary, $response->verdict, $response->related_articles)) {
+                Riwayat::create([
+                    'user_id' => Auth::check() ? Auth::id() : null,
+                    'input_text' => $inputText,
+                    'summary' => $response->summary,
+                    'verdict' => $response->verdict,
+                    'related_articles' => json_encode($response->related_articles),
+                ]);
+            }
+
+            return redirect()->route('index');
         } catch (\Exception $e) {
             return back()->with('error', 'Terjadi kesalahan: ' . $e->getMessage());
         }
