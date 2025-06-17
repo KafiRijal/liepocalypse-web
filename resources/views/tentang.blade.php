@@ -10,8 +10,8 @@
                 Tentang Kami<span> Liepocalypse</span>
             </h2>
             <p class="sub-heding">
-                We're passionate about empowering creatives with the tools they need
-                to bring their vision to life that's why we've developed.
+                Liepocalypse hadir untuk membantu masyarakat memeriksa kebenaran informasi dengan teknologi AI, demi
+                terciptanya ruang digital yang sehat dan bertanggung jawab.
             </p>
             <div class="row marketingRow">
                 <div class="col-xxl-6 col-xl-6">
@@ -90,7 +90,7 @@
                         andalanmu dalam literasi digital.
                     </p>
                     <div class="tryImage-btn-main grnezQ">
-                        <a href="#" class="button">
+                        <a href="{{ url('/') }}" class="button">
                             Coba Sekarang
                             <span class="hoverEffect">
                                 <span></span>
@@ -147,8 +147,9 @@
                 berita secara instan:</p>
             <div class="wrapper">
                 <div class="sugg-box">
-                    <div class="sugg-img-main">
-                        <img class="sugg-img" src="assets/images/home-page/sugg-img1.jpg" alt="sugg-img1">
+                    <div class="col-xxl-6 col-xl-6 col-lg-6">
+                        <img class="shoot-fanta" src="{{ asset('assets/images/svg/kontak.svg') }}"
+                            alt="tentang-liepocalypse">
                     </div>
                     <div>
                         <div class="stie pt-0">

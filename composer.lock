@@ -38,9 +38,7 @@
                         "PDF": "Barryvdh\\DomPDF\\Facade\\Pdf",
                         "Pdf": "Barryvdh\\DomPDF\\Facade\\Pdf"
                     },
-                    "providers": [
-                        "Barryvdh\\DomPDF\\ServiceProvider"
-                    ]
+                    "providers": ["Barryvdh\\DomPDF\\ServiceProvider"]
                 },
                 "branch-alias": {
                     "dev-master": "3.0-dev"
@@ -52,9 +50,7 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
+            "license": ["MIT"],
             "authors": [
                 {
                     "name": "Barry vd. Heuvel",
@@ -62,11 +58,7 @@
                 }
             ],
             "description": "A DOMPDF Wrapper for Laravel",
-            "keywords": [
-                "dompdf",
-                "laravel",
-                "pdf"
-            ],
+            "keywords": ["dompdf", "laravel", "pdf"],
             "support": {
                 "issues": "https://github.com/barryvdh/laravel-dompdf/issues",
                 "source": "https://github.com/barryvdh/laravel-dompdf/tree/v3.1.1"
@@ -470,14 +462,10 @@
                 "psr-4": {
                     "Dompdf\\": "src/"
                 },
-                "classmap": [
-                    "lib/"
-                ]
+                "classmap": ["lib/"]
             },
             "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL-2.1"
-            ],
+            "license": ["LGPL-2.1"],
             "authors": [
                 {
                     "name": "The Dompdf Community",
@@ -520,9 +508,7 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL-2.1-or-later"
-            ],
+            "license": ["LGPL-2.1-or-later"],
             "authors": [
                 {
                     "name": "The FontLib Community",
@@ -566,9 +552,7 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL-3.0-or-later"
-            ],
+            "license": ["LGPL-3.0-or-later"],
             "authors": [
                 {
                     "name": "The SvgLib Community",
@@ -744,9 +728,7 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
+            "license": ["BSD-3-Clause"],
             "authors": [
                 {
                     "name": "Neuman Vong",
@@ -761,14 +743,7 @@
             ],
             "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
             "homepage": "https://github.com/firebase/php-jwt",
-<<<<<<< HEAD
             "keywords": ["jwt", "php"],
-=======
-            "keywords": [
-                "jwt",
-                "php"
-            ],
->>>>>>> origin/Fix/Kafi
             "support": {
                 "issues": "https://github.com/firebase/php-jwt/issues",
                 "source": "https://github.com/firebase/php-jwt/tree/v6.11.1"
@@ -1326,9 +1301,7 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
+            "license": ["MIT"],
             "authors": [
                 {
                     "name": "Oliver Vogel",
@@ -1338,12 +1311,7 @@
             ],
             "description": "Native PHP GIF Encoder/Decoder",
             "homepage": "https://github.com/intervention/gif",
-            "keywords": [
-                "animation",
-                "gd",
-                "gif",
-                "image"
-            ],
+            "keywords": ["animation", "gd", "gif", "image"],
             "support": {
                 "issues": "https://github.com/Intervention/gif/issues",
                 "source": "https://github.com/Intervention/gif/tree/4.2.2"
@@ -1400,9 +1368,7 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
+            "license": ["MIT"],
             "authors": [
                 {
                     "name": "Oliver Vogel",
@@ -1811,9 +1777,7 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
+            "license": ["MIT"],
             "authors": [
                 {
                     "name": "Taylor Otwell",
@@ -1822,10 +1786,7 @@
             ],
             "description": "Laravel wrapper around OAuth 1 & OAuth 2 libraries.",
             "homepage": "https://laravel.com",
-            "keywords": [
-                "laravel",
-                "oauth"
-            ],
+            "keywords": ["laravel", "oauth"],
             "support": {
                 "issues": "https://github.com/laravel/socialite/issues",
                 "source": "https://github.com/laravel/socialite"
@@ -2294,9 +2255,7 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
+            "license": ["MIT"],
             "authors": [
                 {
                     "name": "Ben Corlett",
@@ -2529,9 +2488,7 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
+            "license": ["MIT"],
             "authors": [
                 {
                     "name": "Matt Butcher",
@@ -3040,9 +2997,7 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
+            "license": ["MIT"],
             "authors": [
                 {
                     "name": "Paragon Initiative Enterprises",
@@ -3105,9 +3060,7 @@
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
+            "license": ["MIT"],
             "authors": [
                 {
                     "name": "Paragon Initiative Enterprises",
@@ -3116,12 +3069,7 @@
                 }
             ],
             "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
-            "keywords": [
-                "csprng",
-                "polyfill",
-                "pseudorandom",
-                "random"
-            ],
+            "keywords": ["csprng", "polyfill", "pseudorandom", "random"],
             "support": {
                 "email": "info@paragonie.com",
                 "issues": "https://github.com/paragonie/random_compat/issues",
@@ -3228,17 +3176,13 @@
             },
             "type": "library",
             "autoload": {
-                "files": [
-                    "phpseclib/bootstrap.php"
-                ],
+                "files": ["phpseclib/bootstrap.php"],
                 "psr-4": {
                     "phpseclib3\\": "phpseclib/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
+            "license": ["MIT"],
             "authors": [
                 {
                     "name": "Jim Wigginton",
@@ -3973,9 +3917,7 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
+            "license": ["MIT"],
             "authors": [
                 {
                     "name": "Raphael Schweikert"
@@ -3991,11 +3933,7 @@
             ],
             "description": "Parser for CSS Files written in PHP",
             "homepage": "https://www.sabberworm.com/blog/2010/6/10/php-css-parser",
-            "keywords": [
-                "css",
-                "parser",
-                "stylesheet"
-            ],
+            "keywords": ["css", "parser", "stylesheet"],
             "support": {
                 "issues": "https://github.com/MyIntervals/PHP-CSS-Parser/issues",
                 "source": "https://github.com/MyIntervals/PHP-CSS-Parser/tree/v8.8.0"
