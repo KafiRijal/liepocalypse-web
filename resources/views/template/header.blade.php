@@ -133,8 +133,9 @@
             </div>
             </nav>
         </div>
+    </div>
 
-        {{-- @section('template_scripts')
+    {{-- @section('template_scripts')
         @guest
             <script>
                 document.addEventListener('DOMContentLoaded', function() {

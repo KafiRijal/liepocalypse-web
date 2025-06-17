@@ -107,9 +107,9 @@
         <div class="container">
             <h2 class="sec-heding">Fitur <span>Liepocalypse</span></h2>
             <p class="sub-heding">
-                Interdum nec tortor duis sodales amet fermentum. Faucibus ipsum
-                feugiat lectus hendrerit cum eget. Quisque diam massa at quis
-                vestibulum.
+                Liepocalypse menyediakan fitur-fitur utama berbasis kecerdasan buatan yang dirancang untuk membantu pengguna
+                dalam mendeteksi dan memverifikasi berita hoaks secara efisien. Fitur-fitur ini dikembangkan berdasarkan
+                kebutuhan masyarakat akan literasi digital yang lebih baik dan akses informasi yang terpercaya.
             </p>
             <div class="row home-features-row">
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
@@ -119,10 +119,11 @@
                         </div>
                         <span class="img-bg-circle"></span>
                     </div>
-                    <h3 class="gendseratio">AI-Powered Analysis</h3>
+                    <h3 class="gendseratio">Analisis Berita</h3>
                     <p class="eugiat">
-                        Feugiat non in potenti velit proin semper. In tellus sit erat
-                        turpis suspendisse tincidunt venenatis quam risus.
+                        Aplikasi dapat menganalisis teks, URL, dan file berita untuk mendeteksi kemungkinan hoaks
+                        menggunakan AI
+                        dan NLP (Natural Language Processing).
                     </p>
                 </div>
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
@@ -134,21 +135,8 @@
                     </div>
                     <h3 class="gendseratio">Skor Kepercayaan</h3>
                     <p class="eugiat">
-                        Nec pulvinar morbi eget justo amet elementum volutpat est arcu.
-                        Libero viverra pellentesque faucibus dignissim.
-                    </p>
-                </div>
-                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
-                    <div class="features-cir-main">
-                        <div class="features-cir">
-                            <img src="assets/images/svg/features5.svg" alt="features5" />
-                        </div>
-                        <span class="img-bg-circle"></span>
-                    </div>
-                    <h3 class="gendseratio">Privasi Terjamin</h3>
-                    <p class="eugiat">
-                        Nec pulvinar morbi eget justo amet elementum volutpat est arcu.
-                        Libero viverra pellentesque faucibus dignissim.
+                        Memberikan nilai probabilitas (confidence score) apakah berita tersebut kemungkinan hoaks atau
+                        tidak.
                     </p>
                 </div>
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
