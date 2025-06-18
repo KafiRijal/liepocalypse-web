@@ -38,11 +38,22 @@
                     <div class="box-footer">
                         <p class="resour">Menu</p>
                         <ul class="foot-links">
-                            <li><a href="about.html">Beranda</a></li>
-                            <li><a href="blog.html">Tentang Kami</a></li>
-                            <li><a href="features.html">Deteksi Hoaks</a></li>
-                            <li><a href="faq.html">Langganan</a></li>
-                            <li class="mb-0"><a href="#">Kontak Kami</a></li>
+                            <li><a href="{{ url('/') }}">Beranda</a></li>
+
+                            @auth
+                                <li><a href="{{ url('riwayat') }}">Riwayat</a></li>
+                                <li><a href="{{ url('tentang') }}">Tentang Kami</a></li>
+                                <li><a href="{{ url('langganan') }}">Langganan</a></li>
+                                <li><a href="{{ url('kontak') }}">Kontak Kami</a></li>
+                            @else
+                                <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Riwayat</a></li>
+                                <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Tentang Kami</a>
+                                </li>
+                                <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Langganan</a>
+                                </li>
+                                <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Kontak Kami</a>
+                                </li>
+                            @endauth
                         </ul>
                     </div>
                 </div>

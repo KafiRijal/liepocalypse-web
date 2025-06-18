@@ -4,50 +4,56 @@
     <section class="section-one position-relative mb-5" id="home">
         <img class="blue-gardient8sa" src="{{ asset('assets/images/home-page/blue-gardient8.png') }}" alt="blue-gardient8">
         <img class="blue-gardient9sa" src="{{ asset('assets/images/home-page/blue-gardient9.png') }}" alt="blue-gardient9">
+
         <div class="container">
-            <h1 class="bestAI">Riwayat Berita</h1>
-            <p class="olut">
+            <h1 class="bestAI text-center text-white">Riwayat Berita</h1>
+            <p class="olut text-center text-light">
                 Liepocalypse menggunakan AI untuk mendeteksi hoaks dan memverifikasi informasi dari berbagai sumber.
             </p>
-            <div class="riwayat-layout mt-5">
-                <aside class="sidebar">
-                    {{-- Form Pencarian --}}
-                    <form method="GET" action="{{ route('riwayat') }}" class="search-form"
-                        style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px;">
 
-                        <input type="text" name="q" id="searchInput" value="{{ request('q') }}"
-                            placeholder="Cari berita..." />
+            <div class="row mt-4 justify-content-center">
+                <div class="col-12">
+                    {{-- Box besar gabungan --}}
+                    <div class="p-0 rounded-4 overflow-hidden" style="background-color: #1b2430;">
+                        <div class="d-flex flex-column flex-md-row">
 
-                        <button type="submit"
-                            style="width: 100%; padding: 10px; background: #6e00ff; border: none;
-               border-radius: 8px; color: white; font-weight: bold; font-size: 14px;">
-                            Cari
-                        </button>
-                    </form>
+                            {{-- Sidebar kiri --}}
+                            <div class="p-4 w-100 w-md-40"
+                                style="max-width: 380px; background-color: #1b2430; border-right: 1px solid #2c3440;">
+                                <form method="GET" action="{{ route('riwayat') }}" class="d-flex flex-column gap-2 mb-3">
+                                    <input type="text" name="q" id="searchInput" value="{{ request('q') }}"
+                                        class="form-control bg-secondary border-0 text-white"
+                                        placeholder="Cari berita..." />
+                                    <button type="submit" class="btn btn-primary w-100"
+                                        style="background-color: #5c33ff; border: none;">
+                                        Cari
+                                    </button>
+                                </form>
 
-                    {{-- List Riwayat --}}
-                    <ul id="historyList">
-                        @forelse ($riwayats as $riwayat)
-                            <li onclick="showDetail({{ $riwayat->id }})"
-                                style="color: white; padding: 10px; border-radius: 8px;
-                                       cursor: pointer; word-wrap: break-word; overflow-wrap: break-word; font-size: 14px;">
-                                {{ Str::limit($riwayat->input_text, 80) }}
-                            </li>
-                        @empty
-                            <li style="color: #ccc;">Tidak ada riwayat ditemukan.</li>
-                        @endforelse
-                    </ul>
+                                <ul class="list-unstyled d-flex flex-column gap-2 overflow-auto" style="max-height: 400px;">
+                                    @forelse ($riwayats as $riwayat)
+                                        <li onclick="showDetail({{ $riwayat->id }})"
+                                            class="p-3 bg-secondary text-white rounded-3"
+                                            style="cursor: pointer; word-wrap: break-word;">
+                                            {{ Str::limit($riwayat->input_text, 80) }}
+                                        </li>
+                                    @empty
+                                        <li class="text-muted">Tidak ada riwayat ditemukan.</li>
+                                    @endforelse
+                                </ul>
 
-                    {{-- Pagination --}}
-                    <div class="pagination-container">
-                        {{ $riwayats->withQueryString()->onEachSide(1)->links('vendor.pagination.custom') }}
+                                <div class="mt-3 d-flex justify-content-center">
+                                    {{ $riwayats->withQueryString()->onEachSide(1)->links('vendor.pagination.custom') }}
+                                </div>
+                            </div>
+
+                            {{-- Panel kanan --}}
+                            <div id="riwayatDetail" class="p-4 flex-fill text-white" style="background-color: #1b2430;">
+                                <p>Pilih riwayat di sebelah kiri untuk melihat detail.</p>
+                            </div>
+                        </div>
                     </div>
-                </aside>
-                <main class="detail-panel">
-                    <div id="riwayatDetail">
-                        <p>Pilih riwayat di sebelah kiri untuk melihat detail.</p>
-                    </div>
-                </main>
+                </div>
             </div>
         </div>
     </section>

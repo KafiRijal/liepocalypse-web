@@ -14,7 +14,9 @@
                     <ul class="nav-links">
                         <li class="d-flex justify-content-center">
                             <a href="{{ url('/') }}" class="side-menu-logo">
-                                <img src="{{ asset('assets/images/home-page/logo.png') }}" alt="logo" />
+                                <img src="{{ asset('assets/images/home-page/logo.png') }}" alt="logo"
+                                    class="brand-icon" />
+                                <span class="brand-text">Liepocalypse</span>
                             </a>
                         </li>
                         <li><a class="a-link" href="{{ url('/') }}">Deteksi Hoaks</a></li>

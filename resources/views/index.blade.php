@@ -59,15 +59,16 @@
             @endphp
 
             @if ($result)
-                <div class="result-hoax-box relative">
-                    <h2 class="result-title">Hasil Deteksi Hoaks</h2>
+                <div class="result-hoax-box p-4 border rounded position-relative">
+                    <div class="d-flex justify-content-between align-items-start flex-wrap mb-3">
+                        <h2 class="result-title mb-2">Hasil Deteksi Hoaks</h2>
 
-                    <!-- Tombol Clear -->
-                    <form action="{{ route('clear.session') }}" method="POST"
-                        style="position: absolute; top: 1rem; right: 1rem;">
-                        @csrf
-                        <button type="submit" class="clear-button">Reset Deteksi</button>
-                    </form>
+                        <!-- Tombol Clear -->
+                        <form action="{{ route('clear.session') }}" method="POST" class="mb-2">
+                            @csrf
+                            <button type="submit" class="btn btn-danger btn-sm">Reset Deteksi</button>
+                        </form>
+                    </div>
 
                     <p><strong>📝 Ringkasan:</strong> {{ $result->summary ?? '-' }}</p>
 
@@ -85,6 +86,7 @@
                         </ul>
                     @endif
                 </div>
+
             @endif
 
             <div class="hometags-main">

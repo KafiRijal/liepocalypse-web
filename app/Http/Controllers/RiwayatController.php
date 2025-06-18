@@ -21,7 +21,7 @@ class RiwayatController extends Controller
             $query->where('input_text', 'like', '%' . $request->q . '%');
         }
 
-        $riwayats = $query->latest()->paginate(2);
+        $riwayats = $query->latest()->paginate(5);
 
         return view('riwayat', compact('riwayats'));
     }
