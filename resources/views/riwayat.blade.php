@@ -2,6 +2,8 @@
 
 @section('content')
     <section class="section-one position-relative mb-5" id="home">
+        <img class="blue-gardient8sa" src="{{ asset('assets/images/home-page/blue-gardient8.png') }}" alt="blue-gardient8">
+        <img class="blue-gardient9sa" src="{{ asset('assets/images/home-page/blue-gardient9.png') }}" alt="blue-gardient9">
         <div class="container">
             <h1 class="bestAI">Riwayat Berita</h1>
             <p class="olut">

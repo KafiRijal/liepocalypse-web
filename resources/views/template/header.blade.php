@@ -3,17 +3,18 @@
     <header id="top-navbar" class="top-navbar">
         <div class="container">
             <nav>
-                <a href="{{ url('/') }}" class="logo">
-                    <img src="assets/images/svg/logo.svg" alt="logo" />
+                <a href="{{ url('/') }}" class="brand-logo d-flex align-items-center">
+                    <img src="{{ asset('assets/images/home-page/logo.png') }}" alt="logo" class="brand-icon" />
+                    <span class="brand-text">Liepocalypse</span>
                 </a>
                 <div class="menu-icon" onclick="toggleMenu()">
-                    <img src="assets/images/svg/menu.svg" alt="menu" />
+                    <img src="{{ asset('assets/images/home-page/logo.png') }}" alt="menu" />
                 </div>
                 <div class="nav-links-mn">
                     <ul class="nav-links">
                         <li class="d-flex justify-content-center">
                             <a href="{{ url('/') }}" class="side-menu-logo">
-                                <img src="assets/images/svg/logo.svg" alt="logo" />
+                                <img src="{{ asset('assets/images/home-page/logo.png') }}" alt="logo" />
                             </a>
                         </li>
                         <li><a class="a-link" href="{{ url('/') }}">Deteksi Hoaks</a></li>
@@ -134,19 +135,3 @@
             </nav>
         </div>
     </div>
-
-    {{-- @section('template_scripts')
-        @guest
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    document.querySelectorAll('.requires-auth').forEach(el => {
-                        el.addEventListener('click', function(e) {
-                            e.preventDefault();
-                            const modal = new bootstrap.Modal(document.getElementById('exampleModal'));
-                            modal.show();
-                        });
-                    });
-                });
-            </script>
-        @endguest
-    @endsection --}}

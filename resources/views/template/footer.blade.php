@@ -1,6 +1,6 @@
     <!-- ====================================== Section Footer ===================================== -->
     <footer class="position-relative footer-main">
-        <img class="footer-logo" src="assets/images/home-page/footer-logo.png" alt="footer-logo" />
+        <img class="footer-logo" src="{{ asset('assets/images/home-page/logo.png') }}" alt="footer-logo" />
         <div class="container">
             <div class="row">
                 <div class="col-xxl-8 col-xl-8 col-lg-8 footer-col-fir">
@@ -33,7 +33,8 @@
                     </div>
                 </div>
                 <div class="col-xxl-4 col-xl-4 col-lg-4 footer-col-sec">
-                    <img class="footer-gefdo" src="assets/images/home-page/blue-gardient2.png" alt="blue-gardient2" />
+                    <img class="footer-gefdo" src="{{ asset('assets/images/home-page/blue-gardient2.png') }}"
+                        alt="blue-gardient2" />
                     <div class="box-footer">
                         <p class="resour">Menu</p>
                         <ul class="foot-links">
@@ -68,7 +69,7 @@
                             Liepocalypse</a>
                     </h2>
                     <div class="footer-media">
-                        <a href="https://www.instagram.com"><img src="assets/images/svg/insta.svg"
+                        <a href="https://www.instagram.com"><img src="{{ asset('assets/images/svg/insta.svg') }}"
                                 alt="insta" />Instagram</a>
                     </div>
                 </div>

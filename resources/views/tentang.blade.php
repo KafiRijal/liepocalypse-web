@@ -3,8 +3,8 @@
 @section('content')
     <!-- ====================================== Section Six ===================================== -->
     <section class="section-six overflow-hidden">
-        <img class="blue-gardient8sa" src="assets/images/home-page/blue-gardient8.png" alt="blue-gardient8">
-        <img class="blue-gardient9sa" src="assets/images/home-page/blue-gardient9.png" alt="blue-gardient9">
+        <img class="blue-gardient8sa" src="{{ asset('assets/images/home-page/blue-gardient8.png') }}" alt="blue-gardient8">
+        <img class="blue-gardient9sa" src="{{ asset('assets/images/home-page/blue-gardient9.png') }}" alt="blue-gardient9">
         <div class="container">
             <h2 class="sec-heding">
                 Tentang Kami<span> Liepocalypse</span>
@@ -31,7 +31,7 @@
                     <div class="quis-head">
                         <div class="features-cir-main quis-main">
                             <div class="features-cir quis">
-                                <img src="assets/images/svg/check.svg" alt="check" />
+                                <img src="{{ asset('assets/images/svg/check.svg') }}" alt="check" />
                             </div>
                             <span class="img-bg-circle quis-bg-cir"></span>
                         </div>
@@ -42,7 +42,7 @@
                     <div class="quis-head">
                         <div class="features-cir-main quis-main">
                             <div class="features-cir quis">
-                                <img src="assets/images/svg/check.svg" alt="check" />
+                                <img src="{{ asset('assets/images/svg/check.svg') }}" alt="check" />
                             </div>
                             <span class="img-bg-circle quis-bg-cir"></span>
                         </div>
@@ -53,7 +53,7 @@
                     <div class="quis-head">
                         <div class="features-cir-main quis-main">
                             <div class="features-cir quis">
-                                <img src="assets/images/svg/check.svg" alt="check" />
+                                <img src="{{ asset('assets/images/svg/check.svg') }}" alt="check" />
                             </div>
                             <span class="img-bg-circle quis-bg-cir"></span>
                         </div>
@@ -64,7 +64,7 @@
                     <div class="quis-head mb-0">
                         <div class="features-cir-main quis-main">
                             <div class="features-cir quis">
-                                <img src="assets/images/svg/check.svg" alt="check" />
+                                <img src="{{ asset('assets/images/svg/check.svg') }}" alt="check" />
                             </div>
                             <span class="img-bg-circle quis-bg-cir"></span>
                         </div>
@@ -103,7 +103,8 @@
                         <span class="exce-box-ciecl" id="exce-box1"></span>
                         <div class="excellent">
                             <p>
-                                <img src="assets/images/svg/excellent.svg" alt="excellent" />Deteksi Hoaks Cerdas
+                                <img src="{{ asset('assets/images/svg/excellent.svg') }}" alt="excellent" />Deteksi Hoaks
+                                Cerdas
                             </p>
                         </div>
                         <h3 class="rnaip">
@@ -115,7 +116,8 @@
                         <span class="exce-box-ciecl" id="exce-box2"></span>
                         <div class="excellent">
                             <p>
-                                <img src="assets/images/svg/reliable.svg" alt="reliable" />Rekomendasi Terpercaya
+                                <img src="{{ asset('assets/images/svg/reliable.svg') }}" alt="reliable" />Rekomendasi
+                                Terpercaya
                             </p>
                         </div>
                         <h3 class="rnaip">
@@ -127,7 +129,7 @@
                         <span class="exce-box-ciecl" id="exce-box3"></span>
                         <div class="excellent">
                             <p>
-                                <img src="assets/images/svg/unique.svg" alt="unique" />Riwayat Pengecekan
+                                <img src="{{ asset('assets/images/svg/unique.svg') }}" alt="unique" />Riwayat Pengecekan
                             </p>
                         </div>
                         <h3 class="rnaip">
@@ -140,7 +142,7 @@
     </section>
     <!-- ======================================  About-Section Three ===================================== -->
     <section class="section-four position-relative">
-        <img class="blue-gardient3" src="assets/images/home-page/blue-gardient3.png" alt="blue-gardient3">
+        <img class="blue-gardient3" src="{{ asset('assets/images/home-page/blue-gardient3.png') }}" alt="blue-gardient3">
         <div class="container">
             <h2 class="sec-heding"> Cara Kerja <span>Liepocalypse</span></h2>
             <p class="sub-heding">Deteksi hoaks kini lebih mudah! Ikuti 3 langkah sederhana berikut untuk memverifikasi
@@ -148,7 +150,7 @@
             <div class="wrapper">
                 <div class="sugg-box">
                     <div class="col-xxl-6 col-xl-6 col-lg-6">
-                        <img class="shoot-fanta" src="{{ asset('assets/images/svg/kontak.svg') }}"
+                        <img class="shoot-fanta" src="{{ asset('assets/images/svg/tentang.svg') }}"
                             alt="tentang-liepocalypse">
                     </div>
                     <div>

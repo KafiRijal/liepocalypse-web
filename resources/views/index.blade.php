@@ -103,7 +103,8 @@
     </section>
     <!-- ====================================== Section Two ===================================== -->
     <section class="section-two position-relative mt-5">
-        <img class="round-gradient1" src="assets/images/home-page/round-gradient1.png" alt="round-gradient1" />
+        <img class="round-gradient1" src="{{ asset('assets/images/home-page/round-gradient1.png') }}"
+            alt="round-gradient1" />
         <div class="container">
             <h2 class="sec-heding">Fitur <span>Liepocalypse</span></h2>
             <p class="sub-heding">
@@ -115,7 +116,7 @@
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
                     <div class="features-cir-main">
                         <div class="features-cir">
-                            <img src="assets/images/svg/features1.svg" alt="features1" />
+                            <img src="{{ asset('assets/images/svg/features1.svg') }}" alt="features1" />
                         </div>
                         <span class="img-bg-circle"></span>
                     </div>
@@ -129,7 +130,7 @@
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
                     <div class="features-cir-main">
                         <div class="features-cir">
-                            <img src="assets/images/svg/features2.svg" alt="features2" />
+                            <img src="{{ asset('assets/images/svg/features2.svg') }}" alt="features2" />
                         </div>
                         <span class="img-bg-circle"></span>
                     </div>
@@ -142,7 +143,7 @@
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
                     <div class="features-cir-main">
                         <div class="features-cir">
-                            <img src="assets/images/svg/features3.svg" alt="features3" />
+                            <img src="{{ asset('assets/images/svg/features3.svg') }}" alt="features3" />
                         </div>
                         <span class="img-bg-circle"></span>
                     </div>

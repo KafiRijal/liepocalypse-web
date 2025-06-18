@@ -324,6 +324,25 @@ nav {
     align-items: center;
     gap: 17px;
 }
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.brand-icon {
+    width: 40px; /* Sesuaikan dengan ukuran logo */
+    height: 40px;
+    object-fit: contain;
+}
+
+.brand-text {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+}
 .side-menu-logo {
     display: flex;
     align-items: center;
@@ -2040,9 +2059,13 @@ input[type="url"] {
 .footer-logo {
     position: absolute;
     left: 0;
-    top: 4px;
+    top: 0;
     z-index: -1;
     max-width: 100%;
+    height: auto;
+    opacity: 0.07; /* Tambahkan transparansi agar tidak ganggu teks */
+    pointer-events: none; /* Supaya tidak klik logo */
+    filter: blur(1px) brightness(1.2);
 }
 .box-footer {
     border-radius: 20px;

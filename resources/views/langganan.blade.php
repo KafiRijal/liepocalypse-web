@@ -3,8 +3,8 @@
 @section('content')
     <!-- ====================================== Section Eight ===================================== -->
     <section class="section-eight position-relative">
-        <img class="blue-gardient8sa" src="assets/images/home-page/blue-gardient8.png" alt="blue-gardient8">
-        <img class="blue-gardient9sa" src="assets/images/home-page/blue-gardient9.png" alt="blue-gardient9">
+        <img class="blue-gardient8sa" src="{{ asset('assets/images/home-page/blue-gardient8.png') }}" alt="blue-gardient8">
+        <img class="blue-gardient9sa" src="{{ asset('assets/images/home-page/blue-gardient9.png') }}" alt="blue-gardient9">
         <div class="container">
             <h1 class="sec-heding">Ayo<span> Berlangganan</span> Sekarang</h1>
             <p class="sub-heding">Dapatkan akses premium untuk mendeteksi kebenaran berita secara instan dan akurat dengan
