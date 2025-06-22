@@ -24,12 +24,20 @@
                         Jangan percaya sebelum periksa, mari ciptakan ruang informasi yang lebih sehat dan terpercaya.
                     </p>
                     <div class="ref-demo">
-                        <a href="{{ url('tentang') }}" class="button">
-                            Tentang Kami
-                            <span class="hoverEffect">
-                                <span></span>
-                            </span>
-                        </a>
+                        @auth
+                            <a href="{{ url('tentang') }}" class="button">
+                                Tentang Kami
+                                <span class="hoverEffect">
+                                    <span></span>
+                                </span>
+                            </a>
+                        @else
+                            <a href="#" class="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Tentang
+                                Kami
+                                <span class="hoverEffect">
+                                    <span></span>
+                                </span></a>
+                        @endauth
                     </div>
                 </div>
                 <div class="col-xxl-4 col-xl-4 col-lg-4 footer-col-sec">
